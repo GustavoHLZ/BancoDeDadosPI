@@ -1,0 +1,2 @@
+# BancoDeDadosPI
+regra de negócio
