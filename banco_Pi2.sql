@@ -24,28 +24,6 @@ CREATE TABLE IF NOT EXISTS `Hotel` (
   `Estado_Hotel` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`ID_Hotel`));
 
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Jessi', 'Johnson City', 'United States', 'Tennessee');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Wilt', 'Lubbock', 'United States', 'Texas');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Briney', 'Boca Raton', 'United States', 'Florida');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Orran', 'Bakersfield', 'United States', 'California');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Wren', 'Santa Ana', 'United States', 'California');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Eugenio', 'Las Vegas', 'United States', 'Nevada');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Elisabetta', 'Indianapolis', 'United States', 'Indiana');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Lancelot', 'White Plains', 'United States', 'New York');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Luther', 'Anchorage', 'United States', 'Alaska');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Fedora', 'Atlanta', 'United States', 'Georgia');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Sharron', 'Houston', 'United States', 'Texas');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Gawen', 'Fort Lauderdale', 'United States', 'Florida');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('King', 'Nashville', 'United States', 'Tennessee');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Annadiane', 'Santa Rosa', 'United States', 'California');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Sharon', 'Houston', 'United States', 'Texas');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Danna', 'New Haven', 'United States', 'Connecticut');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Maryanna', 'Fort Lauderdale', 'United States', 'Florida');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Marji', 'Tallahassee', 'United States', 'Florida');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Halley', 'Seattle', 'United States', 'Washington');
-insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Corrie', 'Dallas', 'United States', 'Texas');
-
-
 
 -- -----------------------------------------------------
 -- Table `Info_Login`
