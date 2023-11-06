@@ -111,8 +111,7 @@ CREATE TABLE IF NOT EXISTS `Servicos` (
   `Nome_Servico` VARCHAR(45) NOT NULL,
   `Preco_Servico` FLOAT NOT NULL,
   `Pag_Efetuado` TINYINT NOT NULL,
-  `FK_ID_Pagamento` INT NOT NULL,
-  PRIMARY KEY (`ID_Servico`, `FK_ID_Pagamento`))
+  PRIMARY KEY (`ID_Servico`))
 ENGINE = InnoDB;
 
 
