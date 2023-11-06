@@ -160,3 +160,26 @@ CREATE TABLE IF NOT EXISTS `Sala_Reunioes` (
   CONSTRAINT `fk_Sala_Reunioes_Espacos_Reservados1`
     FOREIGN KEY (`FK_ID_Espaco_reservado`)
     REFERENCES `Espacos_Reservados` (`ID_Espaco_reservado`));
+
+
+insert into Info_Login (ID_usuario, Login, Senha) values (1, 'Allayne', 'kR1&)\g*_9"');
+insert into Info_Login (ID_usuario, Login, Senha) values (2, 'Remus', 'aI7_|Z{&sml+_Fv');
+insert into Info_Login (ID_usuario, Login, Senha) values (3, 'Shanie', 'gR0?x#|in(34');
+insert into Info_Login (ID_usuario, Login, Senha) values (4, 'Rica', 'dF7=O_2YpJ');
+insert into Info_Login (ID_usuario, Login, Senha) values (5, 'Keary', 'aK4"Vql`j');
+insert into Info_Login (ID_usuario, Login, Senha) values (6, 'Curtice', 'qZ4}Lu$Nqu!1Xc');
+insert into Info_Login (ID_usuario, Login, Senha) values (7, 'Siobhan', 'tX5>Tl{_cd&Nc0eg');
+insert into Info_Login (ID_usuario, Login, Senha) values (8, 'Phedra', 'dC4&i4Q5||1Kp');
+insert into Info_Login (ID_usuario, Login, Senha) values (9, 'Timmie', 'zS2~3EH~6z');
+insert into Info_Login (ID_usuario, Login, Senha) values (10, 'Cornela', 'zM1@2_/Z7&');
+insert into Info_Login (ID_usuario, Login, Senha) values (11, 'Casar', 'jK6/YPcGe9');
+insert into Info_Login (ID_usuario, Login, Senha) values (12, 'Radcliffe', 'lZ8=F4`C36');
+insert into Info_Login (ID_usuario, Login, Senha) values (13, 'Christoffer', 'rL8={A)g28bz0''');
+insert into Info_Login (ID_usuario, Login, Senha) values (14, 'Olenka', 'vR9\wMo6e6');
+insert into Info_Login (ID_usuario, Login, Senha) values (15, 'Ajay', 'hS4|x%jgY(t''e9');
+insert into Info_Login (ID_usuario, Login, Senha) values (16, 'Brier', 'rA1&B''HgF`6');
+insert into Info_Login (ID_usuario, Login, Senha) values (17, 'Fionnula', 'eM3~8_7gn(');
+insert into Info_Login (ID_usuario, Login, Senha) values (18, 'Tremaine', 'lY5=''C2M&Sj!+Y6J');
+insert into Info_Login (ID_usuario, Login, Senha) values (19, 'Latrina', 'pY6~@Ll%B,#7(/~f');
+insert into Info_Login (ID_usuario, Login, Senha) values (20, 'Hadley', 'mY0#rEz#hoLV$A');
+
