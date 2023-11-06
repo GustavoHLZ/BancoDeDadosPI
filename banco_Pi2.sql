@@ -202,3 +202,24 @@ insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hos
 insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hospede, telefone_hospede, email_hospede, fk_id_usuario) values (1818 ,'Lisle', 'Hutcheon', '2/28/2023', '134-834-3267', 'lhutcheonh@netvibes.com', 18);
 insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hospede, telefone_hospede, email_hospede, fk_id_usuario) values (1919,'Kylynn', 'Bicknell', '3/8/2023', '583-881-0023', 'kbicknelli@ucsd.edu', 19);
 insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hospede, telefone_hospede, email_hospede, fk_id_usuario) values (2020,'Land', 'McKea', '6/1/2023', '686-127-3017', 'lmckeaj@xrea.com', 20);
+
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Jessi', 'Johnson City', 'United States', 'Tennessee');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Wilt', 'Lubbock', 'United States', 'Texas');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Briney', 'Boca Raton', 'United States', 'Florida');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Orran', 'Bakersfield', 'United States', 'California');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Wren', 'Santa Ana', 'United States', 'California');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Eugenio', 'Las Vegas', 'United States', 'Nevada');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Elisabetta', 'Indianapolis', 'United States', 'Indiana');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Lancelot', 'White Plains', 'United States', 'New York');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Luther', 'Anchorage', 'United States', 'Alaska');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Fedora', 'Atlanta', 'United States', 'Georgia');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Sharron', 'Houston', 'United States', 'Texas');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Gawen', 'Fort Lauderdale', 'United States', 'Florida');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('King', 'Nashville', 'United States', 'Tennessee');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Annadiane', 'Santa Rosa', 'United States', 'California');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Sharon', 'Houston', 'United States', 'Texas');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Danna', 'New Haven', 'United States', 'Connecticut');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Maryanna', 'Fort Lauderdale', 'United States', 'Florida');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Marji', 'Tallahassee', 'United States', 'Florida');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Halley', 'Seattle', 'United States', 'Washington');
+insert into Hotel (Nome_Hotel, Cidade_Hotel, Pais_Hotel, Estado_Hotel) values ('Corrie', 'Dallas', 'United States', 'Texas');
