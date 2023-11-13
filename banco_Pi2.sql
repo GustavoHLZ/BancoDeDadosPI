@@ -185,4 +185,23 @@ insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hos
 insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hospede, telefone_hospede, email_hospede, fk_id_usuario) values (1919,'Kylynn', 'Bicknell', '1993-08-11', '583-881-0023', 'kbicknelli@ucsd.edu', 19);
 insert into Hospedes (ID_Hospede,Nome_Hospede, sobrenome_hospede, nascimento_hospede, telefone_hospede, email_hospede, fk_id_usuario) values (2020,'Land', 'McKea', '1986-01-12', '686-127-3017', 'lmckeaj@xrea.com', 20);
 
-
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (101, 1, 1, 'Frigobar');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (102, 2, 2, 'Jack Daniels');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (103, 3, 3, 'Shot de Jack');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (104, 4, 4, 'Whiskey Tenessey');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (105, 5, 5, 'Shot Blue Label');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (106, 6, 6, 'Combo de Heineken');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (107, 7, 7, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (108, 8, 8, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (109, 9, 9, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (110, 10, 10, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (111, 11, 11, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (112, 12, 12, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (113, 13, 13, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (114, 14, 14, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (115, 15, 15, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (116, 16, 16, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (117, 17, 17, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (118, 18, 18, '');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (119, 19, 19, '‫');
+insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (120, 20, 20, '');
