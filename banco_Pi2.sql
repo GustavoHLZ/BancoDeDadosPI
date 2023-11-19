@@ -463,6 +463,17 @@ update Quartos set Tipo_Quarto ='Suíte', Preco_Diaria =9999999999.99, Dispo_Qua
 update Quartos set Tipo_Quarto ='Solteiro', Preco_Diaria =9999999999.99, Dispo_Quarto =true,  Cap_max =1 where ID_Quarto=89;
 update Quartos set Tipo_Quarto ='Suíte', Preco_Diaria =9999999999.99, Dispo_Quarto =false,  Cap_max =2 where ID_Quarto=90;
 
+update Sala_Reunioes set Disp_Sala =true, Cap_Max =8 where ID_Sala=191;
+update Sala_Reunioes set Disp_Sala =false, Cap_Max =10 where ID_Sala=192;
+update Sala_Reunioes set Disp_Sala =false, Cap_Max =8 where ID_Sala=193;
+update Sala_Reunioes set Disp_Sala =true, Cap_Max =6 where ID_Sala=194;
+update Sala_Reunioes set Disp_Sala =true, Cap_Max =6 where ID_Sala=195;
+update Sala_Reunioes set Disp_Sala =true, Cap_Max =8 where ID_Sala=196;
+update Sala_Reunioes set Disp_Sala =true, Cap_Max =8 where ID_Sala=197;
+update Sala_Reunioes set Disp_Sala =false, Cap_Max =6 where ID_Sala=198;
+update Sala_Reunioes set Disp_Sala =false, Cap_Max =8 where ID_Sala=199;
+update Sala_Reunioes set Disp_Sala =true, Cap_Max =10 where ID_Sala=200;
+
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 79.99, Nome_Servico = 'Frigobar1'  where  ID_Servico in (101);
 update Servicos set Pag_Efetuado =  false, Preco_Servico = 149.99, Nome_Servico = 'Frigobar2'  where  ID_Servico in (102);
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 299.99, Nome_Servico = 'Frigobar3'  where  ID_Servico in (103);
