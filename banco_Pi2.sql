@@ -394,6 +394,13 @@ delete from Info_Login where ID_usuario in (3);
 delete from Info_Login where ID_usuario in (4);
 delete from Info_Login where ID_usuario in (5);
 
+delete from Computadores where ID_PC in (41);
+delete from Computadores where ID_PC in (42);
+delete from Computadores where ID_PC in (43);
+delete from Computadores where ID_PC in (44);
+delete from Computadores where ID_PC in (45);
+
+
 
 
 
