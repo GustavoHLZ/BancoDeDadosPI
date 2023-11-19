@@ -503,6 +503,12 @@ delete from Info_Login where ID_usuario=3;
 delete from Info_Login where ID_usuario=4;
 delete from Info_Login where ID_usuario=5;
 
+delete from Hospedes where ID_Hospede=1616;
+delete from Hospedes where ID_Hospede=1717;
+delete from Hospedes where ID_Hospede=1818;
+delete from Hospedes where ID_Hospede=1919;
+delete from Hospedes where ID_Hospede=2020;
+
 delete from Computadores where ID_PC in (41);
 delete from Computadores where ID_PC in (42);
 delete from Computadores where ID_PC in (43);
