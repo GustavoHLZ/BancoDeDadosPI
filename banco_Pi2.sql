@@ -219,6 +219,27 @@ insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) val
 insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (119, true, 28.60, 'Cuervo Margarita‫');
 insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (120, false, 28.60, 'Negroni');
 
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (21, 0101, 101);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (22, 0202, 102);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (23, 0303, 103);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (24, 0404, 104);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (25, 0505, 105);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (26, 0606, 106);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (27, 0707, 107);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (28, 0808, 108);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (29, 0909, 109);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (30, 1010, 110);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (31, 1111, 111);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (32, 1212, 112);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (33, 1313, 113);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (34, 1414, 114);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (35, 1515, 115);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (36, 1616, 116);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (37, 1717 , 117);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (38, 1818, 118);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (39, 1919, 119);
+insert into Servicos_Consumidos (ID_Servico_Consumido, FK_Hospedes_ID, FK_Servicos_ID) values (40, 2020, 120);
+
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (121, 7.0, 'Horton', 0101);
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (122, 2.0, 'Barrett', 0202);
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (123, 5.0, 'Antonius', 0303);
