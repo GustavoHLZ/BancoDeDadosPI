@@ -437,6 +437,7 @@ Select * FROM Sala_Reunioes;
 SELECT * FROM Hospedes INNER JOIN Info_Login ON Hospedes.fk_id_usuario = Info_login.ID_usuario;
 SELECT * FROM Servicos_Consumidos INNER JOIN Servicos ON Servicos_Consumidos.FK_Servicos_ID = Servicos.ID_Servico INNER JOIN Hospedes ON Servicos_Consumidos.FK_Hospedes_ID = Hospedes.ID_Hospede;
 SELECT * FROM Avaliacoes INNER JOIN Hospedes ON Avaliacoes.FK_ID_Hospede = Hospedes.ID_Hospede;
+SELECT * FROM Espacos_Reservados INNER JOIN Espacos ON Espacos_Reservados.FK_ID_Espaco = Espacos.ID_Espaco INNER JOIN Hospedes ON Espacos_Reservados.FK_ID_Hospede = Hospedes.ID_Hospede;
 
 update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
