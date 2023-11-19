@@ -531,6 +531,12 @@ delete from Hospedes where ID_Hospede=1818;
 delete from Hospedes where ID_Hospede=1919;
 delete from Hospedes where ID_Hospede=2020;
 
+delete from Servicos where ID_Servico = 101;
+delete from Servicos where ID_Servico = 102;
+delete from Servicos where ID_Servico = 103;
+delete from Servicos where ID_Servico = 104;
+delete from Servicos where ID_Servico = 105;
+
 delete from Computadores where ID_PC in (41);
 delete from Computadores where ID_PC in (42);
 delete from Computadores where ID_PC in (43);
