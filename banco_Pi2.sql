@@ -537,6 +537,12 @@ delete from Servicos where ID_Servico = 103;
 delete from Servicos where ID_Servico = 104;
 delete from Servicos where ID_Servico = 105;
 
+delete from Servicos_Consumidos where ID_Servico_Consumido = 21;
+delete from Servicos_Consumidos where ID_Servico_Consumido = 22;
+delete from Servicos_Consumidos where ID_Servico_Consumido = 23;
+delete from Servicos_Consumidos where ID_Servico_Consumido = 24;
+delete from Servicos_Consumidos where ID_Servico_Consumido = 25;
+
 delete from Computadores where ID_PC in (41);
 delete from Computadores where ID_PC in (42);
 delete from Computadores where ID_PC in (43);
