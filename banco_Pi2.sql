@@ -409,19 +409,17 @@ update Computadores set Temp_Alugado = 11 where ID_PC in (48);
 update Computadores set Temp_Alugado = 6 where ID_PC in (49);
 update Computadores set Temp_Alugado = 17 where ID_PC in (50);
 
-delete from Info_Login where ID_usuario in (1);
-delete from Info_Login where ID_usuario in (2);
-delete from Info_Login where ID_usuario in (3);
-delete from Info_Login where ID_usuario in (4);
-delete from Info_Login where ID_usuario in (5);
+SET foreign_key_checks = 0;
+delete from Info_Login where ID_usuario=1;
+delete from Info_Login where ID_usuario=2;
+delete from Info_Login where ID_usuario=3;
+delete from Info_Login where ID_usuario=4;
+delete from Info_Login where ID_usuario=5;
 
 delete from Computadores where ID_PC in (41);
 delete from Computadores where ID_PC in (42);
 delete from Computadores where ID_PC in (43);
 delete from Computadores where ID_PC in (44);
 delete from Computadores where ID_PC in (45);
-
-
-
 
 
