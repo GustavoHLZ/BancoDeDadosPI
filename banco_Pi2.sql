@@ -219,27 +219,6 @@ insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) val
 insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (119, true, 28.60, 'Cuervo Margarita‫');
 insert into Servicos (ID_Servico, Pag_Efetuado, Preco_Servico, Nome_Servico) values (120, false, 28.60, 'Negroni');
 
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11111, 141, 0101);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11112, 142, 0202);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11113, 143, 0303);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11114, 144, 0404);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11115, 145, 0505);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11116, 146, 0606);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11117, 147, 0707);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11118, 148, 0808);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11119, 149, 0909);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11120, 150, 1010);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11121, 151, 1111);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11122, 152, 1212);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11123, 153, 1313);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11124, 154, 1414);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11125, 155, 1515);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11126, 156, 1616);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11127, 157, 1717);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11128, 158, 1818);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11129, 159, 1919);
-insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11130, 160, 2020);
-
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (121, 7.0, 'Horton', 0101);
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (122, 2.0, 'Barrett', 0202);
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (123, 5.0, 'Antonius', 0303);
@@ -324,6 +303,27 @@ insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (19
 insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (199, 0, '0001-01-01', '0001-01-01');
 insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (200, 0, '0001-01-01', '0001-01-01');
 
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11111, 141, 0101);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11112, 142, 0202);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11113, 143, 0303);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11114, 144, 0404);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11115, 145, 0505);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11116, 146, 0606);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11117, 147, 0707);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11118, 148, 0808);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11119, 149, 0909);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11120, 150, 1010);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11121, 151, 1111);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11122, 152, 1212);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11123, 153, 1313);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11124, 154, 1414);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11125, 155, 1515);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11126, 156, 1616);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11127, 157, 1717);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11128, 158, 1818);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11129, 159, 1919);
+insert into Espacos_Reservados (ID_Espaco_Reservado, FK_ID_Espaco, FK_ID_Hospede) values (11130, 160, 2020);
+
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (81, 'Solteiro', 4099427424.22, false, 1, 141);
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (82, 'Suíte', 8174618376.73, true, 2, 142);
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (83, 'Cama Dupla', 3440196511.28, true, 4, 143);
@@ -366,16 +366,16 @@ insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (58,
 insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (59, 19, 19, 179);
 insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (60, 20, 20, 180);
 
-update Info_Login set Login = "Kaua", Senha = 12783734 where ID_usuario in (1);
-update Info_Login set Login = “Zed”, Senha = 724587453 where ID_usuario in (2);
-update Info_Login set Login = “Leoncio”, Senha = 7367344 where ID_usuario in (3);
-update Info_Login set Login = “Kayn”, Senha =7834578  where ID_usuario in (4);
-update Info_Login set Login = “Reyna”, Senha = 9053498 where ID_usuario in (5);
-update Info_Login set Login = “Jett”, Senha = 89045978 where ID_usuario in (6);
-update Info_Login set Login = “Gojo”, Senha = 9783457892 where ID_usuario in (7);
-update Info_Login set Login = “Ippo”, Senha =789345789 where ID_usuario in (8);
-update Info_Login set Login = “Takamura”, Senha =796345786 where ID_usuario in (9);
-update Info_Login set Login = “Aoki”, Senha = 897239 where ID_usuario in (10);
+update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
+update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
+update Info_Login set Login = 'Leoncio', Senha = 7367344 where ID_usuario in (3);
+update Info_Login set Login = 'Kayn', Senha =7834578  where ID_usuario in (4);
+update Info_Login set Login = 'Reyna', Senha = 9053498 where ID_usuario in (5);
+update Info_Login set Login = 'Jett', Senha = 89045978 where ID_usuario in (6);
+update Info_Login set Login = 'Gojo', Senha = 9783457892 where ID_usuario in (7);
+update Info_Login set Login = 'Ippo', Senha =789345789 where ID_usuario in (8);
+update Info_Login set Login = 'Takamura', Senha =796345786 where ID_usuario in (9);
+update Info_Login set Login = 'Aoki', Senha = 897239 where ID_usuario in (10);
 
 update Computadores set Temp_Alugado = 5 where ID_PC in (41);
 update Computadores set Temp_Alugado = 10 where ID_PC in (42);
