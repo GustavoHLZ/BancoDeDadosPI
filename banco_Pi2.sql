@@ -413,6 +413,7 @@ insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espa
 SELECT COUNT(*) FROM Info_Login;
 SELECT COUNT(*) FROM Hospedes;
 SELECT COUNT(*) FROM Servicos;
+SELECT COUNT(*) FROM Servicos_Consumidos;
 
 update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
