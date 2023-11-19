@@ -452,6 +452,17 @@ update Espacos set Ocupante_Espaco =1, Check_In ='2023-06-20', Check_Out ='2023-
 update Espacos set Ocupante_Espaco =2, Check_In ='2023-01-21', Check_Out ='2023-10-24' where ID_Espaco=149;
 update Espacos set Ocupante_Espaco =1, Check_In ='2023-02-21', Check_Out ='2023-10-24' where ID_Espaco=150;
 
+update Quartos set Tipo_Quarto ='Suíte', Preco_Diaria =9999999999.99, Dispo_Quarto =true,  Cap_max =2 where ID_Quarto=81;
+update Quartos set Tipo_Quarto ='Cama Dupla', Preco_Diaria =9999999999.99, Dispo_Quarto =false,  Cap_max =4 where ID_Quarto=82;
+update Quartos set Tipo_Quarto ='Solteiro', Preco_Diaria =9999999999.99, Dispo_Quarto =false,  Cap_max =1 where ID_Quarto=83;
+update Quartos set Tipo_Quarto ='Cama Dupla', Preco_Diaria =9999999999.99, Dispo_Quarto =true,  Cap_max =4 where ID_Quarto=84;
+update Quartos set Tipo_Quarto ='Suíte', Preco_Diaria =9999999999.99, Dispo_Quarto =false,  Cap_max =2 where ID_Quarto=85;
+update Quartos set Tipo_Quarto ='Solteiro', Preco_Diaria =9999999999.99, Dispo_Quarto =true,  Cap_max =1 where ID_Quarto=86;
+update Quartos set Tipo_Quarto ='Cama Dupla', Preco_Diaria =9999999999.99, Dispo_Quarto =false,  Cap_max =4 where ID_Quarto=87;
+update Quartos set Tipo_Quarto ='Suíte', Preco_Diaria =9999999999.99, Dispo_Quarto =true,  Cap_max =2 where ID_Quarto=88;
+update Quartos set Tipo_Quarto ='Solteiro', Preco_Diaria =9999999999.99, Dispo_Quarto =true,  Cap_max =1 where ID_Quarto=89;
+update Quartos set Tipo_Quarto ='Suíte', Preco_Diaria =9999999999.99, Dispo_Quarto =false,  Cap_max =2 where ID_Quarto=90;
+
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 79.99, Nome_Servico = 'Frigobar1'  where  ID_Servico in (101);
 update Servicos set Pag_Efetuado =  false, Preco_Servico = 149.99, Nome_Servico = 'Frigobar2'  where  ID_Servico in (102);
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 299.99, Nome_Servico = 'Frigobar3'  where  ID_Servico in (103);
