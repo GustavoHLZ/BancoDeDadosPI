@@ -430,6 +430,7 @@ Select * FROM Avaliacoes;
 Select * FROM Espacos;
 Select * FROM Quartos;
 Select * FROM Computadores;
+Select * FROM Sala_Reunioes;
 
 update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
