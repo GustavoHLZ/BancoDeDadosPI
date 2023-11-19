@@ -430,6 +430,17 @@ update Hospedes set Nome_Hospede='Venvace',sobrenome_hospede='Ben',nascimento_ho
 update Hospedes set Nome_Hospede='Jose',sobrenome_hospede='Martins',nascimento_hospede='1988-11-30',telefone_hospede='952-534-9850',email_hospede='nozlx@fazl.cn' where ID_Hospede=0909;
 update Hospedes set Nome_Hospede='Jonas',sobrenome_hospede='Oliveira',nascimento_hospede='1992-09-01',telefone_hospede='152-234-2655',email_hospede='jonasrl@brasil.com' where ID_Hospede=1010;
 
+update Espacos_Reservados set FK_ID_Espaco = 141, FK_ID_Hospede = 0101 where ID_Espaco_Reservado = 11111;
+update Espacos_Reservados set FK_ID_Espaco = 142, FK_ID_Hospede = 0202 where ID_Espaco_Reservado = 11112;
+update Espacos_Reservados set FK_ID_Espaco = 143, FK_ID_Hospede = 0303 where ID_Espaco_Reservado = 11113;
+update Espacos_Reservados set FK_ID_Espaco = 144, FK_ID_Hospede = 0404 where ID_Espaco_Reservado = 11114;
+update Espacos_Reservados set FK_ID_Espaco = 145, FK_ID_Hospede = 0505 where ID_Espaco_Reservado = 11115;
+update Espacos_Reservados set FK_ID_Espaco = 146, FK_ID_Hospede = 0606 where ID_Espaco_Reservado = 11116;
+update Espacos_Reservados set FK_ID_Espaco = 147, FK_ID_Hospede = 0707 where ID_Espaco_Reservado = 11117;
+update Espacos_Reservados set FK_ID_Espaco = 148, FK_ID_Hospede = 0808 where ID_Espaco_Reservado = 11118;
+update Espacos_Reservados set FK_ID_Espaco = 149, FK_ID_Hospede = 0909 where ID_Espaco_Reservado = 11119;
+update Espacos_Reservados set FK_ID_Espaco = 150, FK_ID_Hospede = 1010 where ID_Espaco_Reservado = 11120;
+
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 79.99, Nome_Servico = 'Frigobar1'  where  ID_Servico in (101);
 update Servicos set Pag_Efetuado =  false, Preco_Servico = 149.99, Nome_Servico = 'Frigobar2'  where  ID_Servico in (102);
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 299.99, Nome_Servico = 'Frigobar3'  where  ID_Servico in (103);
