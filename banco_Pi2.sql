@@ -441,6 +441,17 @@ update Servicos set Pag_Efetuado =  false, Preco_Servico = 40.99, Nome_Servico =
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 40.99, Nome_Servico = 'Jantar'  where  ID_Servico in (109);
 update Servicos set Pag_Efetuado =  false, Preco_Servico = 25.99, Nome_Servico = 'Espumante Salton Brut' where  ID_Servico in (110);
 
+update Servicos_Consumidos set FK_Hospedes_ID = 0101,   FK_Servicos_ID = 101 where ID_Servico_Consumido = 21;
+update Servicos_Consumidos set FK_Hospedes_ID = 0202,   FK_Servicos_ID = 102 where ID_Servico_Consumido = 22;
+update Servicos_Consumidos set FK_Hospedes_ID = 0303,   FK_Servicos_ID = 103 where ID_Servico_Consumido = 23;
+update Servicos_Consumidos set FK_Hospedes_ID = 0404,   FK_Servicos_ID = 104 where ID_Servico_Consumido = 24;
+update Servicos_Consumidos set FK_Hospedes_ID = 0505,   FK_Servicos_ID = 105 where ID_Servico_Consumido = 25;
+update Servicos_Consumidos set FK_Hospedes_ID = 0606,   FK_Servicos_ID = 106 where ID_Servico_Consumido = 26;
+update Servicos_Consumidos set FK_Hospedes_ID = 0707,   FK_Servicos_ID = 107 where ID_Servico_Consumido = 27;
+update Servicos_Consumidos set FK_Hospedes_ID = 0808,   FK_Servicos_ID = 108 where ID_Servico_Consumido = 28;
+update Servicos_Consumidos set FK_Hospedes_ID = 0909,   FK_Servicos_ID = 109 where ID_Servico_Consumido = 29;
+update Servicos_Consumidos set FK_Hospedes_ID = 1010,  FK_Servicos_ID = 110 where ID_Servico_Consumido = 30;
+
 update Avaliacoes set Avaliacao=8.2,Avaliador='Gustavo' where ID_Avaliacao=121;
 update Avaliacoes set Avaliacao=8.0,Avaliador='Natanel' where ID_Avaliacao=122;
 update Avaliacoes set Avaliacao=6.5,Avaliador='Milane' where ID_Avaliacao=123;
