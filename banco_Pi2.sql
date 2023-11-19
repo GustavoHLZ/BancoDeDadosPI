@@ -356,3 +356,12 @@ update Info_Login set Login = “Ippo”, Senha =789345789 where ID_usuario in (
 update Info_Login set Login = “Takamura”, Senha =796345786 where ID_usuario in (9);
 update Info_Login set Login = “Aoki”, Senha = 897239 where ID_usuario in (10);
 
+delete from Info_Login where ID_usuario in (1);
+delete from Info_Login where ID_usuario in (2);
+delete from Info_Login where ID_usuario in (3);
+delete from Info_Login where ID_usuario in (4);
+delete from Info_Login where ID_usuario in (5);
+
+
+
+
