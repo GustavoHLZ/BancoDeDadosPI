@@ -344,3 +344,15 @@ insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (98, 'Suíte', 8261645856.87, true, 2, 158);
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (99, 'Solteiro', 4504021984.02, false, 1, 159);
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (100, 'Suíte', 7209148493.83, false, 2, 160);
+
+update Info_Login set Login = "Kaua", Senha = 12783734 where ID_usuario in (1);
+update Info_Login set Login = “Zed”, Senha = 724587453 where ID_usuario in (2);
+update Info_Login set Login = “Leoncio”, Senha = 7367344 where ID_usuario in (3);
+update Info_Login set Login = “Kayn”, Senha =7834578  where ID_usuario in (4);
+update Info_Login set Login = “Reyna”, Senha = 9053498 where ID_usuario in (5);
+update Info_Login set Login = “Jett”, Senha = 89045978 where ID_usuario in (6);
+update Info_Login set Login = “Gojo”, Senha = 9783457892 where ID_usuario in (7);
+update Info_Login set Login = “Ippo”, Senha =789345789 where ID_usuario in (8);
+update Info_Login set Login = “Takamura”, Senha =796345786 where ID_usuario in (9);
+update Info_Login set Login = “Aoki”, Senha = 897239 where ID_usuario in (10);
+
