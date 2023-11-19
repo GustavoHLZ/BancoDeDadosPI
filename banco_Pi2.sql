@@ -345,6 +345,27 @@ insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (99, 'Solteiro', 4504021984.02, false, 1, 159);
 insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (100, 'Suíte', 7209148493.83, false, 2, 160);
 
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (41, 1, 1, 141);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (42, 2, 2, 142);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (43, 3, 3, 143);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (44, 4, 4, 144);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (45, 5, 5, 145);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (46, 6, 6, 146);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (47, 7, 7, 147);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (48, 8, 8, 148);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (49, 9, 9, 149);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (50, 10, 10, 150);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (51, 11, 11, 151);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (52, 12, 12, 152);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (53, 13, 13, 153);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (54, 14, 14, 154);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (55, 15, 15, 155);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (56, 16, 16, 156);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (57, 17, 17, 157);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (58, 18, 18, 158);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (59, 19, 19, 159);
+insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (60, 20, 20, 160);
+
 update Info_Login set Login = "Kaua", Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = “Zed”, Senha = 724587453 where ID_usuario in (2);
 update Info_Login set Login = “Leoncio”, Senha = 7367344 where ID_usuario in (3);
