@@ -537,6 +537,12 @@ delete from Espacos_Reservados where ID_Espaco_reservado=11128;
 delete from Espacos_Reservados where ID_Espaco_reservado=11129;
 delete from Espacos_Reservados where ID_Espaco_reservado=11130;
 
+delete from Espacos where ID_Espaco=11126;
+delete from Espacos where ID_Espaco=11127;
+delete from Espacos where ID_Espaco=11128;
+delete from Espacos where ID_Espaco=11129;
+delete from Espacos where ID_Espaco=11130;
+
 delete from Servicos where ID_Servico = 101;
 delete from Servicos where ID_Servico = 102;
 delete from Servicos where ID_Servico = 103;
