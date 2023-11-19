@@ -55,20 +55,16 @@ CREATE TABLE IF NOT EXISTS `Avaliacoes` (
     FOREIGN KEY (`FK_ID_Hospede`)
     REFERENCES `Hospedes` (`ID_Hospede`));
 
-
 -- -----------------------------------------------------
--- Table `Espacos_Reservados`
+-- Table `Espacos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Espacos_Reservados` (
-  `ID_Espaco_reservado` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `Espacos` (
+  `ID_Espaco` INT NOT NULL AUTO_INCREMENT,
   `Ocupante_Espaco` INT NOT NULL,
   `Check_In` DATE NOT NULL,
   `Check_Out` DATE NOT NULL,
-  `FK_ID_Hospede` INT NOT NULL,
-  PRIMARY KEY (`ID_Espaco_reservado`, `FK_ID_Hospede`),
-  CONSTRAINT `fk_Quartos_Reservados_Hospedes1`
-    FOREIGN KEY (`FK_ID_Hospede`)
-    REFERENCES `Hospedes` (`ID_Hospede`));
+  PRIMARY KEY (`ID_Espaco`));
+
 
 -- -----------------------------------------------------
 -- Table `Quartos`
@@ -79,11 +75,11 @@ CREATE TABLE IF NOT EXISTS `Quartos` (
   `Preco_Diaria` FLOAT NOT NULL,
   `Dispo_Quarto` TINYINT NOT NULL,
   `Cap_max` INT NOT NULL,
-  `FK_ID_Espaco_reservado` INT NOT NULL,
-  PRIMARY KEY (`ID_Quarto`, `FK_ID_Espaco_reservado`),
-  CONSTRAINT `fk_Quartos_Espacos_Reservados1`
-    FOREIGN KEY (`FK_ID_Espaco_reservado`)
-    REFERENCES `Espacos_Reservados` (`ID_Espaco_reservado`));
+  `FK_ID_Espaco` INT NOT NULL,
+  PRIMARY KEY (`ID_Quarto`, `FK_ID_Espaco`),
+  CONSTRAINT `fk_Quartos_Espacos1`
+    FOREIGN KEY (`FK_ID_Espaco`)
+    REFERENCES `Espacos` (`ID_Espaco`));
 
 
 -- -----------------------------------------------------
@@ -121,11 +117,11 @@ CREATE TABLE IF NOT EXISTS `Computadores` (
   `ID_PC` INT NOT NULL,
   `Num_PC` INT NOT NULL,
   `Temp_Alugado` INT NOT NULL,
-  `FK_ID_Espaco_reservado` INT NOT NULL,
-  PRIMARY KEY (`ID_PC`, `FK_ID_Espaco_reservado`),
-  CONSTRAINT `fk_Computadores_Espacos_Reservados1`
-    FOREIGN KEY (`FK_ID_Espaco_reservado`)
-    REFERENCES `Espacos_Reservados` (`ID_Espaco_reservado`));
+  `FK_ID_Espaco` INT NOT NULL,
+  PRIMARY KEY (`ID_PC`, `FK_ID_Espaco`),
+  CONSTRAINT `fk_Computadores_Espacos1`
+    FOREIGN KEY (`FK_ID_Espaco`)
+    REFERENCES `Espacos` (`ID_Espaco`));
 
 
 -- -----------------------------------------------------
@@ -136,11 +132,27 @@ CREATE TABLE IF NOT EXISTS `Sala_Reunioes` (
   `Disp_Sala` TINYINT NOT NULL,
   `Temp_Alugado` INT NOT NULL,
   `Cap_Max` INT NOT NULL,
-  `FK_ID_Espaco_reservado` INT NOT NULL,
-  PRIMARY KEY (`ID_Sala`, `FK_ID_Espaco_reservado`),
-  CONSTRAINT `fk_Sala_Reunioes_Espacos_Reservados1`
-    FOREIGN KEY (`FK_ID_Espaco_reservado`)
-    REFERENCES `Espacos_Reservados` (`ID_Espaco_reservado`));
+  `FK_ID_Espaco` INT NOT NULL,
+  PRIMARY KEY (`ID_Sala`, `FK_ID_Espaco`),
+  CONSTRAINT `fk_Sala_Reunioes_Espacos1`
+    FOREIGN KEY (`FK_ID_Espaco`)
+    REFERENCES `Espacos` (`ID_Espaco`));
+    
+-- -----------------------------------------------------
+-- Table `Espacos_Reservados`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Espacos_Reservados` (
+ `ID_Espaco_Reservado` INT NOT NULL AUTO_INCREMENT,
+  `FK_ID_Espaco` INT NOT NULL,
+  `FK_ID_Hospede` INT NOT NULL,
+  PRIMARY KEY (`ID_Espaco_Reservado`,`FK_ID_Espaco`, `FK_ID_Hospede`),
+  CONSTRAINT `fk_Espacos_has_Hospedes_Espacos1`
+    FOREIGN KEY (`FK_ID_Espaco`)
+    REFERENCES `Espacos` (`ID_Espaco`),
+  CONSTRAINT `fk_Espacos_has_Hospedes_Hospedes1,`
+    FOREIGN KEY (`FK_ID_Hospede`)
+    REFERENCES `Hospedes` (`ID_Hospede`));
+
 
 
 insert into Info_Login (ID_usuario, Login, Senha) values (1, 'Allayne', 'kR1&)\g*_9"');
@@ -227,86 +239,86 @@ insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) value
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (139, 8.8, 'Kylynn', 1919);
 insert into Avaliacoes (ID_Avaliacao, Avaliacao, Avaliador, FK_ID_Hospede) values (140, 10.0, 'Land', 2020);
 
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (141, 1, '2023-05-18', '2023-06-18', 0101);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (142, 2, '2023-11-03', '2023-12-01', 0202);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (143, 1, '2022-12-16', '2023-12-19', 0303);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (144, 2, '2023-01-03', '2023-02-07', 0404);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (145, 2, '2023-03-15', '2023-03-17', 0505);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (146, 2, '2023-05-14', '2023-05-19', 0606);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (147, 2, '2023-03-01', '2023-04-09', 0707);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (148, 1, '2023-01-14', '2023-02-01', 0808);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (149, 3, '2023-01-17', '2023-01-20', 0909);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (150, 1, '2023-02-24', '2023-03-01', 1010);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (151, 1, '2023-03-11', '2022-03-17', 1111);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (152, 2, '2023-04-15', '2023-04-19', 1212);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (153, 3, '2023-01-16', '2023-01-18', 1313);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (154, 2, '2023-05-02', '2023-05-05', 1414);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (155, 1, '2022-11-13', '2023-11-16', 1515);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (156, 1, '2022-10-01', '2023-10-05', 1616);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (157, 2, '2022-09-01', '2023-09-07', 1717);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (158, 1, '2023-02-01', '2023-02-04', 1818);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (159, 1, '2023-03-02', '2023-03-10', 1919);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (160, 2, '2023-02-10', '2023-02-15', 2020);
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (141, 1, '2023-05-18', '2023-06-18');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (142, 2, '2023-11-03', '2023-12-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (143, 1, '2022-12-16', '2023-12-19');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (144, 2, '2023-01-03', '2023-02-07');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (145, 2, '2023-03-15', '2023-03-17');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (146, 2, '2023-05-14', '2023-05-19');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (147, 2, '2023-03-01', '2023-04-09');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (148, 1, '2023-01-14', '2023-02-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (149, 3, '2023-01-17', '2023-01-20');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (150, 1, '2023-02-24', '2023-03-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (151, 1, '2023-03-11', '2022-03-17');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (152, 2, '2023-04-15', '2023-04-19');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (153, 3, '2023-01-16', '2023-01-18');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (154, 2, '2023-05-02', '2023-05-05');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (155, 1, '2022-11-13', '2023-11-16');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (156, 1, '2022-10-01', '2023-10-05');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (157, 2, '2022-09-01', '2023-09-07');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (158, 1, '2023-02-01', '2023-02-04');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (159, 1, '2023-03-02', '2023-03-10');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (160, 2, '2023-02-10', '2023-02-15');
 
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (161, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (162, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (163, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (164, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (165, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (166, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (167, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (168, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (169, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (170, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (171, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (172, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (173, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (174, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (175, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (176, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (177, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (178, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (179, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (180, 0, '0001-01-01', '0001-01-01', 0000);
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out ) values (161, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (162, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (163, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (164, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (165, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (166, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (167, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (168, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (169, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (170, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (171, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (172, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (173, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (174, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (175, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (176, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (177, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (178, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (179, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (180, 0, '0001-01-01', '0001-01-01');
 
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (181, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (182, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (183, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (184, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (185, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (186, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (187, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (188, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (189, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (190, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (191, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (192, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (193, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (194, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (195, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (196, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (197, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (198, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (199, 0, '0001-01-01', '0001-01-01', 0000);
-insert into Espacos_Reservados (ID_Espaco_reservado, Ocupante_Espaco, Check_In, Check_Out, FK_ID_Hospede) values (200, 0, '0001-01-01', '0001-01-01', 0000);
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (181, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (182, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (183, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (184, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (185, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (186, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (187, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (188, 0, '0001-01-01', '0001-01-01' );
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (189, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (190, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (191, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (192, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (193, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (194, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (195, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (196, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (197, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (198, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (199, 0, '0001-01-01', '0001-01-01');
+insert into Espacos (ID_Espaco, Ocupante_Espaco, Check_In, Check_Out) values (200, 0, '0001-01-01', '0001-01-01');
 
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (81, 'Solteiro', '$4099427424.22', false, 1, 141);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (82, 'Suíte', '$8174618376.73', true, 2, 142);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (83, 'Cama Dupla', '$3440196511.28', true, 4, 143);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (84, 'Cama Dupla', '$6803365501.62', true, 4, 144);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (85, 'Cama Dupla', '$5808994985.61', false, 4, 145);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (86, 'Cama Dupla', '$5706131096.03', false, 4, 146);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (87, 'Suíte', '$4867550475.94', false, 2, 147);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (88, 'Suíte', '$1088227692.06', false, 2, 148);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (89, 'Cama Dupla', '$2388249698.15', true, 4, 149);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (90, 'Solteiro', '$393493386.23', true, 1, 150);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (91, 'Solteiro', '$8015993029.39', false, 1, 151);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (92, 'Cama Dupla', '$6177861157.81', false, 4, 152);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (93, 'Cama Dupla', '$7330932083.33', false, 4, 153);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (94, 'Suíte', '$6314751111.59', true, 2, 154);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (95, 'Solteiro', '$750962244.65', false, 1, 155);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (96, 'Solteiro', '$529583171.97', false, 1, 156);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (97, 'Cama Dupla', '$490544772.94', true, 4, 157);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (98, 'Suíte', '$8261645856.87', true, 2, 158);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (99, 'Solteiro', '$4504021984.02', false, 1, 159);
-insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco_reservado) values (100, 'Suíte', '$7209148493.83', false, 2, 160);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (81, 'Solteiro', 4099427424.22, false, 1, 141);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (82, 'Suíte', 8174618376.73, true, 2, 142);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (83, 'Cama Dupla', 3440196511.28, true, 4, 143);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (84, 'Cama Dupla', 6803365501.62, true, 4, 144);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (85, 'Cama Dupla', 5808994985.61, false, 4, 145);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (86, 'Cama Dupla', 5706131096.03, false, 4, 146);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (87, 'Suíte', 4867550475.94, false, 2, 147);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (88, 'Suíte', 1088227692.06, false, 2, 148);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (89, 'Cama Dupla', 2388249698.15, true, 4, 149);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (90, 'Solteiro', 393493386.23, true, 1, 150);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (91, 'Solteiro', 8015993029.39, false, 1, 151);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (92, 'Cama Dupla', 6177861157.81, false, 4, 152);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (93, 'Cama Dupla', 7330932083.33, false, 4, 153);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (94, 'Suíte', 6314751111.59, true, 2, 154);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (95, 'Solteiro', 750962244.65, false, 1, 155);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (96, 'Solteiro', 529583171.98, false, 1, 156);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (97, 'Cama Dupla', 490544772.94, true, 4, 157);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (98, 'Suíte', 8261645856.87, true, 2, 158);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (99, 'Solteiro', 4504021984.02, false, 1, 159);
+insert into Quartos (ID_Quarto, Tipo_Quarto, Preco_Diaria, Dispo_Quarto, Cap_max, FK_ID_Espaco) values (100, 'Suíte', 7209148493.83, false, 2, 160);
