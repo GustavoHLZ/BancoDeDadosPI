@@ -439,6 +439,7 @@ SELECT * FROM Servicos_Consumidos INNER JOIN Servicos ON Servicos_Consumidos.FK_
 SELECT * FROM Avaliacoes INNER JOIN Hospedes ON Avaliacoes.FK_ID_Hospede = Hospedes.ID_Hospede;
 SELECT * FROM Espacos_Reservados INNER JOIN Espacos ON Espacos_Reservados.FK_ID_Espaco = Espacos.ID_Espaco INNER JOIN Hospedes ON Espacos_Reservados.FK_ID_Hospede = Hospedes.ID_Hospede;
 SELECT * FROM Quartos INNER JOIN Espacos ON Quartos.FK_ID_Espaco = Espacos.ID_Espaco;
+SELECT * FROM Computadores INNER JOIN Espacos ON Computadores.FK_ID_Espaco = Espacos.ID_Espaco;
 
 update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
