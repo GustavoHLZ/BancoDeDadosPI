@@ -441,6 +441,17 @@ update Espacos_Reservados set FK_ID_Espaco = 148, FK_ID_Hospede = 0808 where ID_
 update Espacos_Reservados set FK_ID_Espaco = 149, FK_ID_Hospede = 0909 where ID_Espaco_Reservado = 11119;
 update Espacos_Reservados set FK_ID_Espaco = 150, FK_ID_Hospede = 1010 where ID_Espaco_Reservado = 11120;
 
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-10-21', Check_Out ='2023-10-24' where ID_Espaco=141;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-01-21', Check_Out ='2023-01-23' where ID_Espaco=142;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-02-01', Check_Out ='2023-02-05' where ID_Espaco=143;
+update Espacos set Ocupante_Espaco =2, Check_In ='2023-05-22', Check_Out ='2023-05-26' where ID_Espaco=144;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-05-21', Check_Out ='2023-05-24' where ID_Espaco=145;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-11-13', Check_Out ='2023-11-18' where ID_Espaco=146;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-03-01', Check_Out ='2023-03-07' where ID_Espaco=147;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-06-20', Check_Out ='2023-06-24' where ID_Espaco=148;
+update Espacos set Ocupante_Espaco =2, Check_In ='2023-01-21', Check_Out ='2023-10-24' where ID_Espaco=149;
+update Espacos set Ocupante_Espaco =1, Check_In ='2023-02-21', Check_Out ='2023-10-24' where ID_Espaco=150;
+
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 79.99, Nome_Servico = 'Frigobar1'  where  ID_Servico in (101);
 update Servicos set Pag_Efetuado =  false, Preco_Servico = 149.99, Nome_Servico = 'Frigobar2'  where  ID_Servico in (102);
 update Servicos set Pag_Efetuado =  true, Preco_Servico = 299.99, Nome_Servico = 'Frigobar3'  where  ID_Servico in (103);
