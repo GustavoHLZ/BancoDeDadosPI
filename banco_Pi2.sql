@@ -543,6 +543,12 @@ delete from Espacos where ID_Espaco=11128;
 delete from Espacos where ID_Espaco=11129;
 delete from Espacos where ID_Espaco=11130;
 
+delete from Quartos where ID_Quarto=156;
+delete from Quartos where ID_Quarto=157;
+delete from Quartos where ID_Quarto=158;
+delete from Quartos where ID_Quarto=159;
+delete from Quartos where ID_Quarto=160;
+
 delete from Servicos where ID_Servico = 101;
 delete from Servicos where ID_Servico = 102;
 delete from Servicos where ID_Servico = 103;
