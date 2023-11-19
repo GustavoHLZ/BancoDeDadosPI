@@ -377,6 +377,17 @@ update Info_Login set Login = “Ippo”, Senha =789345789 where ID_usuario in (
 update Info_Login set Login = “Takamura”, Senha =796345786 where ID_usuario in (9);
 update Info_Login set Login = “Aoki”, Senha = 897239 where ID_usuario in (10);
 
+update Computadores set Temp_Alugado = 5 where ID_PC in (41);
+update Computadores set Temp_Alugado = 10 where ID_PC in (42);
+update Computadores set Temp_Alugado = 8 where ID_PC in (43);
+update Computadores set Temp_Alugado = 7 where ID_PC in (44);
+update Computadores set Temp_Alugado = 12 where ID_PC in (45);
+update Computadores set Temp_Alugado = 15 where ID_PC in (46);
+update Computadores set Temp_Alugado = 1 where ID_PC in (47);
+update Computadores set Temp_Alugado = 11 where ID_PC in (48);
+update Computadores set Temp_Alugado = 6 where ID_PC in (49);
+update Computadores set Temp_Alugado = 17 where ID_PC in (50);
+
 delete from Info_Login where ID_usuario in (1);
 delete from Info_Login where ID_usuario in (2);
 delete from Info_Login where ID_usuario in (3);
