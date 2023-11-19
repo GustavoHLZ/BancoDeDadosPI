@@ -387,6 +387,27 @@ insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (58,
 insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (59, 19, 19, 179);
 insert into Computadores (ID_PC, Num_PC, Temp_Alugado, FK_ID_Espaco) values (60, 20, 20, 180);
 
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (61, false, 80, 4, 181);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (62, false, 90, 8, 182);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (63, true, 60, 6, 183);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (64, false, 70, 4, 184);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (65, false, 100, 6, 185);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (66, false, 60, 6, 186);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (67, false, 70, 10, 187);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (68, true, 90, 8, 188);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (69, true, 60, 6, 189);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (70, true, 100, 10, 190);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (71, false, 100, 8, 191);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (72, true, 100, 8, 192);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (73, true, 60, 10, 193);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (74, false, 70, 4, 194);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (75, false, 90, 4, 195);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (76, false, 100, 10, 196);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (77, false, 70, 10, 197);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (78, true, 60, 4, 198);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (79, true, 90, 6, 199);
+insert into Sala_Reunioes (ID_Sala, Disp_Sala, Temp_Alugado, Cap_Max, FK_ID_Espaco) values (80, false, 60, 8, 200);
+
 update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
 update Info_Login set Login = 'Leoncio', Senha = 7367344 where ID_usuario in (3);
