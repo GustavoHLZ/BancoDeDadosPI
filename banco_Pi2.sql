@@ -430,6 +430,17 @@ update set Nome_Hospede='Venvace',sobrenome_hospede='Ben',nascimento_hospede='19
 update set Nome_Hospede='Jose',sobrenome_hospede='Martins',nascimento_hospede='1988-11-30',telefone_hospede='952-534-9850',email_hospede='nozlx@fazl.cn' where ID_Hospede=0909;
 update set Nome_Hospede='Jonas',sobrenome_hospede='Oliveira',nascimento_hospede='1992-09-01',telefone_hospede='152-234-2655',email_hospede='jonasrl@brasil.com' where ID_Hospede=1010;
 
+update set Avaliacao=8.2,Avaliador='Gustavo' where ID_Avaliacao=121;
+update set Avaliacao=8.0,Avaliador='Natanel' where ID_Avaliacao=122;
+update set Avaliacao=6.5,Avaliador='Milane' where ID_Avaliacao=123;
+update set Avaliacao=5.0,Avaliador='Bruce' where ID_Avaliacao=124;
+update set Avaliacao=9.1,Avaliador='Chuck' where ID_Avaliacao=125;
+update set Avaliacao=8.6,Avaliador='Samara' where ID_Avaliacao=126;
+update set Avaliacao=10.0,Avaliador='Camilla' where ID_Avaliacao=127;
+update set Avaliacao=7.1,Avaliador='Venvace' where ID_Avaliacao=128;
+update set Avaliacao=9.8,Avaliador='Jose' where ID_Avaliacao=129;
+update set Avaliacao=9.2,Avaliador='Jonas' where ID_Avaliacao=130;
+
 update Computadores set Temp_Alugado = 5 where ID_PC in (41);
 update Computadores set Temp_Alugado = 10 where ID_PC in (42);
 update Computadores set Temp_Alugado = 8 where ID_PC in (43);
