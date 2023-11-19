@@ -549,6 +549,12 @@ delete from Quartos where ID_Quarto=158;
 delete from Quartos where ID_Quarto=159;
 delete from Quartos where ID_Quarto=160;
 
+delete from Sala_Reunioes where ID_Sala=196;
+delete from Sala_Reunioes where ID_Sala=197;
+delete from Sala_Reunioes where ID_Sala=198;
+delete from Sala_Reunioes where ID_Sala=199;
+delete from Sala_Reunioes where ID_Sala=200;
+
 delete from Servicos where ID_Servico = 101;
 delete from Servicos where ID_Servico = 102;
 delete from Servicos where ID_Servico = 103;
