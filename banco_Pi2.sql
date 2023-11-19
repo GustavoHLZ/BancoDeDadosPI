@@ -543,6 +543,12 @@ delete from Servicos_Consumidos where ID_Servico_Consumido = 23;
 delete from Servicos_Consumidos where ID_Servico_Consumido = 24;
 delete from Servicos_Consumidos where ID_Servico_Consumido = 25;
 
+delete from Avaliacoes where ID_Avaliacao=136;
+delete from Avaliacoes where ID_Avaliacao=137;
+delete from Avaliacoes where ID_Avaliacao=138;
+delete from Avaliacoes where ID_Avaliacao=139;
+delete from Avaliacoes where ID_Avaliacao=140;
+
 delete from Computadores where ID_PC in (41);
 delete from Computadores where ID_PC in (42);
 delete from Computadores where ID_PC in (43);
