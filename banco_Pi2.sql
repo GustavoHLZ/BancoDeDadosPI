@@ -424,6 +424,7 @@ SELECT COUNT(*) FROM Sala_Reunioes;
 
 Select * FROM Info_Login;
 Select * FROM Hospedes;
+Select * FROM Servicos;
 
 update Info_Login set Login = 'Kaua', Senha = 12783734 where ID_usuario in (1);
 update Info_Login set Login = 'Zed', Senha = 724587453 where ID_usuario in (2);
