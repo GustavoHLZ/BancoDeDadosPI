@@ -419,6 +419,17 @@ update Info_Login set Login = 'Ippo', Senha =789345789 where ID_usuario in (8);
 update Info_Login set Login = 'Takamura', Senha =796345786 where ID_usuario in (9);
 update Info_Login set Login = 'Aoki', Senha = 897239 where ID_usuario in (10);
 
+update set Nome_Hospede='Gustavo',sobrenome_hospede='Henrique',nascimento_hospede='1999-10-21',telefone_hospede='672-645-9328',email_hospede='gtole@desev.cn' where ID_Hospede=0101;
+update set Nome_Hospede='Natanel',sobrenome_hospede='Louris',nascimento_hospede='1997-02-21',telefone_hospede='452-234-5658',email_hospede='nafae@netvibes.com' where ID_Hospede=0202;
+update set Nome_Hospede='Milane',sobrenome_hospede='Brixton',nascimento_hospede='2000-05-01',telefone_hospede='252-234-8822',email_hospede='mlaafe@nox.com' where ID_Hospede=0303;
+update set Nome_Hospede='Bruce',sobrenome_hospede='Wayne',nascimento_hospede='2001-03-30',telefone_hospede='332-251-2561',email_hospede='wayneinterprises@gotham.com' where ID_Hospede=0404;
+update set Nome_Hospede='Chuck',sobrenome_hospede='Grayson',nascimento_hospede='2002-02-21',telefone_hospede='572-344-4998',email_hospede='afe@lonh.com' where ID_Hospede=0505;
+update set Nome_Hospede='Samara',sobrenome_hospede='Kusil',nascimento_hospede='1996-12-25',telefone_hospede='689-155-5881',email_hospede='zeile@hmail.cn' where ID_Hospede=0606;
+update set Nome_Hospede='Camilla',sobrenome_hospede='Medeiros',nascimento_hospede='1979-08-17',telefone_hospede='822-821-9243',email_hospede='karle@hoyl.cn' where ID_Hospede=0707;
+update set Nome_Hospede='Venvace',sobrenome_hospede='Ben',nascimento_hospede='1959-09-15',telefone_hospede='722-764-8422',email_hospede='robsle@batmin.com' where ID_Hospede=0808;
+update set Nome_Hospede='Jose',sobrenome_hospede='Martins',nascimento_hospede='1988-11-30',telefone_hospede='952-534-9850',email_hospede='nozlx@fazl.cn' where ID_Hospede=0909;
+update set Nome_Hospede='Jonas',sobrenome_hospede='Oliveira',nascimento_hospede='1992-09-01',telefone_hospede='152-234-2655',email_hospede='jonasrl@brasil.com' where ID_Hospede=1010;
+
 update Computadores set Temp_Alugado = 5 where ID_PC in (41);
 update Computadores set Temp_Alugado = 10 where ID_PC in (42);
 update Computadores set Temp_Alugado = 8 where ID_PC in (43);
