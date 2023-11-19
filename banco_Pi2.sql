@@ -430,6 +430,17 @@ update Hospedes set Nome_Hospede='Venvace',sobrenome_hospede='Ben',nascimento_ho
 update Hospedes set Nome_Hospede='Jose',sobrenome_hospede='Martins',nascimento_hospede='1988-11-30',telefone_hospede='952-534-9850',email_hospede='nozlx@fazl.cn' where ID_Hospede=0909;
 update Hospedes set Nome_Hospede='Jonas',sobrenome_hospede='Oliveira',nascimento_hospede='1992-09-01',telefone_hospede='152-234-2655',email_hospede='jonasrl@brasil.com' where ID_Hospede=1010;
 
+update Servicos set Pag_Efetuado =  true, Preco_Servico = 79.99, Nome_Servico = 'Frigobar1'  where  ID_Servico in (101);
+update Servicos set Pag_Efetuado =  false, Preco_Servico = 149.99, Nome_Servico = 'Frigobar2'  where  ID_Servico in (102);
+update Servicos set Pag_Efetuado =  true, Preco_Servico = 299.99, Nome_Servico = 'Frigobar3'  where  ID_Servico in (103);
+update Servicos set Pag_Efetuado =  false, Preco_Servico = 35.99 , Nome_Servico = 'Reposição1'  where  ID_Servico in (104);
+update Servicos set Pag_Efetuado =  true, Preco_Servico = 55.99, Nome_Servico = 'Reposição2'  where  ID_Servico in (105);
+update Servicos set Pag_Efetuado =  true, Preco_Servico = 125.99, Nome_Servico = 'Reposição3'  where  ID_Servico in (106);
+update Servicos set Pag_Efetuado =  false, Preco_Servico = 39.99, Nome_Servico = 'Café da manhã'  where  ID_Servico in (107);
+update Servicos set Pag_Efetuado =  false, Preco_Servico = 40.99, Nome_Servico = 'Almoço'  where  ID_Servico in (108);
+update Servicos set Pag_Efetuado =  true, Preco_Servico = 40.99, Nome_Servico = 'Jantar'  where  ID_Servico in (109);
+update Servicos set Pag_Efetuado =  false, Preco_Servico = 25.99, Nome_Servico = 'Espumante Salton Brut' where  ID_Servico in (110);
+
 update Avaliacoes set Avaliacao=8.2,Avaliador='Gustavo' where ID_Avaliacao=121;
 update Avaliacoes set Avaliacao=8.0,Avaliador='Natanel' where ID_Avaliacao=122;
 update Avaliacoes set Avaliacao=6.5,Avaliador='Milane' where ID_Avaliacao=123;
