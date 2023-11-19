@@ -531,6 +531,12 @@ delete from Hospedes where ID_Hospede=1818;
 delete from Hospedes where ID_Hospede=1919;
 delete from Hospedes where ID_Hospede=2020;
 
+delete from Espacos_Reservados where ID_Espaco_reservado=11126;
+delete from Espacos_Reservados where ID_Espaco_reservado=11127;
+delete from Espacos_Reservados where ID_Espaco_reservado=11128;
+delete from Espacos_Reservados where ID_Espaco_reservado=11129;
+delete from Espacos_Reservados where ID_Espaco_reservado=11130;
+
 delete from Servicos where ID_Servico = 101;
 delete from Servicos where ID_Servico = 102;
 delete from Servicos where ID_Servico = 103;
