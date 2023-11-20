@@ -1,4 +1,3 @@
-![Diagrama Banco de Dados](https://github.com/GustavoHLZ/BancoDeDadosPI/assets/124809860/deeb368b-b8ab-4b97-beb5-d5f9ee6d6942)# BancoDeDadosPI
 Regra de negócio
 
 Descrição: Apresentamos nosso sistema de gestão hoteleira, um software que simplifica o controle de dados de um estabelecimento hoteleiro. Com segurança garantida, o sistema armazena informações cruciais, incluindo reservas de quartos, solicitações de computadores e reservas de salas de reuniões. Os funcionários têm facilidade para modificar e acessar dados essenciais, como Check-In e Check-Out dos hóspedes, avaliações, e realizar alterações conforme necessário. Nosso sistema é projetado com foco na segurança, garantindo uma gestão eficiente e simples para todos.
