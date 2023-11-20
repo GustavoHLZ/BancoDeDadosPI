@@ -5,7 +5,7 @@ Descrição: Apresentamos nosso sistema de gestão hoteleira, um software que si
 Imagem do Diagrama:
 ![Diagrama Banco de Dados](https://github.com/GustavoHLZ/BancoDeDadosPI/assets/124809860/9a98cd5f-c0d9-4227-8dc8-35def124b3d0)
 
-Alunos que estão fazendo o Banco de Dados : Gustavo, Kauã, Murilo e Luigi.
+Alunos: Gustavo, Kauã, Murilo e Luigi.
 Projeto desenvolvido no 5ª semestre do IFSC.
 
 
